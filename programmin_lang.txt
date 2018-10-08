@@ -1,0 +1,82 @@
+Language: java
+
+why java: 
+	
+	1.In Program statement we need to compare two objects. java having the inbuilt method "equals". where in c++, I need to 	traverse the string to check wether every letter is matching to given string or not. So to make my code more efficient and 		inbuilt feature I used java language in below program. 
+	
+	2. Program basically stores the Employee information or data. That means data is growable(many employee data need to add 	later). As the Linked list is growable data structure I used Linked list in my program. which is nothing but collection which 		suppports in java. Thats why java for this program.
+
+	3. Equals method basically used to comapare object of reference type. and "==" used to compare object of value type.
+	Eg. int a = 5; and int b = 10; we will use "==" here.
+	eg. Employee emp1 = new Employee("Praj",12000);
+	Employee emp2 = new Employee("Anu",22000);
+	
+	here i want to compare emp1 and emp2 of employee type. means 2 objects need to compare. so "equals method will used.
+			|praj	|	|anu	|
+ 		String	|_______|	|______	|	
+			|12000	|	|22000	|
+		int	|_______|	|_______|
+			emp1		emp2
+
+		these are two ref type object, so comapring these we need to use equals method. I used in my program too.
+
+
+	4. As I am using Linked list I need to traverse list node by node. For each loop is easier way to traverse. There is no use 		of the index or rather the counter in for each loop. cpp do not support for each. Thats why java for this program.
+
+	
+
+
+program:
+
+
+import java.util.LinkedList;					//As using Linked list import Linkedlist library.
+public class compareObjects{
+    public static void main(String[] args)			//declare the main method which is executed by JVM at the starting
+    {	
+        String joiningDate = "2/8/1993";			//Initialize date which need to find.
+        
+        
+        LinkedList<String> dates = new LinkedList<>();		//create object of class Linkedlist
+        dates.add("2/8/1993");					//adding elements to the Linked list 
+        dates.add("1/9/2018");					//so that we can compare with some data.
+        dates.add("9/9/1993");
+        dates.add("1/9/2015"); 
+        
+        for (String str: dates)					//Now we will travarsing the Linkedlist node by node by using foreach
+        {							//loop.There is no use of the index or counter in for each loop 									
+								//Equals method basically checks the reference type object.The basic
+          if(str.equals(joiningDate))				//difference between euqauls and "==" is we can check object of
+            {							//referance type with equals method and object of value type with"==";
+                System.out.println("Date is present here");	//if the two Objects get matched then it it returns true i.e. 1. so 
+            }							//if program entered into if condition block.  
+        }
+        
+        
+    }
+}
+
+
+
+			|	|	|	|	|	|	|	|
+ 		String	|2/8/93	|_______|1/9/18	|_______|9/9/93	|_______|1/9/15	|	joiningDate = "2/8/1993"
+			|	|	|	|	|	|	|	|
+			|_______|	|_______|	|_______|	|_______|
+			emp1		emp2		emp3		emp4
+
+			
+			
+			here I checked String type joiningDate with String type dates by traversing Linkedlist using foreach loop.
+
+
+
+(The reqirement is to write 20 line code having loop and condition in it. So I choose this program so that I can impliment more java feature in 20 line of code. i used LinkedList, equals method and for each loop.)
+
+
+
+
+
+
+
+
+
+
